@@ -11,7 +11,14 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
+        String output = "";
+        int input_length = s.length();
+        for(int i=0; i<input_length; i++){
+            char curr = s.charAt(i);
+            if(output.indexOf(curr) == -1 || (int)curr == 32){
+                output += curr;
+            }
+        }
+        return output;
     }
 }
